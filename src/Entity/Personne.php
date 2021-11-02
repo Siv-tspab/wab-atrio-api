@@ -33,6 +33,8 @@ class Personne
     private $birthday;
 
 
+    private $age;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -70,6 +72,18 @@ class Personne
     public function setBirthday(\DateTimeInterface $birthday): self
     {
         $this->birthday = $birthday;
+
+        return $this;
+    }
+
+    public function getAge(): ?string
+    {
+        return $this->age;
+    }
+
+    public function setAge(string $age): self
+    {
+        $this->age = $age;
 
         return $this;
     }
